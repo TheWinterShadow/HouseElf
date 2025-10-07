@@ -112,11 +112,11 @@ hatch run test
 # Run tests with coverage
 hatch run test-cov
 
-# Lint code
-hatch run lint:check
+# Check code quality
+hatch run dev:check
 
 # Format code
-hatch run lint:fmt
+hatch run dev:fmt
 
 # Build documentation
 hatch run docs:build
@@ -137,11 +137,13 @@ pytest
 # Run with coverage
 pytest --cov=houseelf --cov-report=term-missing
 
-# Lint code
-ruff check src tests
+# Lint and type check code
+flake8 src tests
+mypy src
 
 # Format code
-ruff format src tests
+isort src tests
+black src tests
 ```
 
 ## Documentation

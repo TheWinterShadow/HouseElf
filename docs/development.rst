@@ -117,7 +117,9 @@ Continuous Integration
 
 The project uses GitHub Actions for CI/CD (to be configured):
 
-* Linting with ruff
+* Code formatting with black and isort
+* Linting with flake8
+* Type checking with mypy
 * Testing with pytest
 * Documentation building with Sphinx
 * Docker image building
